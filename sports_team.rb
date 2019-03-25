@@ -1,24 +1,11 @@
 class Team
 
+  attr_reader :teamname, :players
+  attr_accessor :coach
+
   def initialize(teamname, players, coach)
     @teamname = teamname
     @players = players
-    @coach = coach
-  end
-
-  def get_teamname()
-    return @teamname
-  end
-
-  def get_players()
-    return @players
-  end
-
-  def get_coach()
-    return @coach
-  end
-
-  def set_coach(coach)
     @coach = coach
   end
 
