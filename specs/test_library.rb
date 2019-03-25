@@ -20,8 +20,12 @@ class LibraryTest < MiniTest::Test
     assert_equal(@starting_books, @library_object.get_books())
   end
 
-  def test_get_book_info
-    assert_equal(@starting_book, @library_object.get_book_info("lord_of_the_rings"))
+  def test_get_book_details
+    assert_equal(@starting_book, @library_object.get_book_details("lord_of_the_rings"))
+  end
+
+  def test_get_rental_details
+    assert_equal(@starting_book[:rental_details], @library_object.get_rental_details("lord_of_the_rings"))
   end
 
 end

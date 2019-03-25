@@ -8,7 +8,7 @@ class Library
     return @books
   end
 
-  def get_book_info(book_title)
+  def get_book_details(book_title)
     # for book in @books
     #   if book[:title] == book_title
     #     return book
@@ -16,6 +16,10 @@ class Library
     # end
     # refactored to use select again..
     return @books.select{|book| book[:title] == book_title}[0]
+  end
+
+  def get_rental_details(book_title)
+    return @books.select{|book| book[:title] == book_title}[0][:rental_details]
   end
 
 end
