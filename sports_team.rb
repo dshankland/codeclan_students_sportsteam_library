@@ -1,5 +1,8 @@
 class Team
 
+  # ask about why some are reader but
+  # we have methods to update them
+
   attr_reader :teamname, :players, :points
   attr_accessor :coach
 
