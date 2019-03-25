@@ -28,5 +28,10 @@ class LibraryTest < MiniTest::Test
     assert_equal(@starting_book[:rental_details], @library_object.get_rental_details("lord_of_the_rings"))
   end
 
+  def test_add_book_title
+    @library_object.add_book('learning_ruby')
+    assert_equal({title: "learning_ruby",rental_details: {student_name: "",date: ""}}, @library_object.get_book_details("learning_ruby"))
+  end
+
 end
 
