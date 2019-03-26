@@ -19,6 +19,7 @@ class Library
   end
 
   def get_rental_details(book_title)
+    # could reuse the find by title function here but maybe check for nil
     return @books.select{|book| book[:title] == book_title}[0][:rental_details]
   end
 

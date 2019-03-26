@@ -5,6 +5,7 @@ require_relative('../library')
 class LibraryTest < MiniTest::Test
 
   def setup
+    # can use without @ symbol if not using elsewhere
     @starting_book = {
       title: "lord_of_the_rings",
       rental_details: {
